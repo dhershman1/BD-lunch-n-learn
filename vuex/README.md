@@ -262,6 +262,7 @@ We want to re use `events` within our `test` and `other` stores but we don't wan
 const store = {
   namespaced: true,
   // To achieve this, we simply turn the state into a function rather than an object
+  // This is the same reason why you use data as a function within components!
   state() {
     return {
       loading: false
