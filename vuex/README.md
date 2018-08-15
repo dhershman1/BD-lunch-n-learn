@@ -27,7 +27,7 @@ Most commonly you will call your modules "Stores" which Vuex is creating and giv
 
 > **Pro Tip**: Try to make your stores tasked based instead of based around a page
 
-A store is broken down 4 objects (sometimes less), these are:
+A store is broken down into 4 objects (sometimes less), these are:
 
 - State: The basic state of the data. This is where all the data will live
 - Getters: Used to get data in a certain way don't use getters just to get state back use it to get it back in a special manner
