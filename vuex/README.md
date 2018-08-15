@@ -30,7 +30,6 @@ Most commonly you will call your modules "Stores" which Vuex is creating and giv
 A store is broken down 4 objects (sometimes less), these are:
 
 - State: The basic state of the data. This is where all the data will live
-  -
 - Getters: Used to get data in a certain way don't use getters just to get state back use it to get it back in a special manner
   - Don't use a getter to just get state, use getters to retrieve state in a transformed or updated manner
 - Mutations: Used to change state values. A sloppy manner of doing so but a way none the less
