@@ -30,9 +30,12 @@ Most commonly you will call your modules "Stores" which Vuex is creating and giv
 A store is broken down into 4 objects (sometimes less), these are:
 
 - State: The basic state of the data. This is where all the data will live
+  - Try to initialize your state with some kind of value, what you intend it to be, try to avoid null/undefined state
+  - For instance: If you plan for it to be a string, make it an empty string, if it is going to be an object then an empty object
+  - This helps a whole lot in keeping data clean and consistent, making it so you always know what exactly to expect
 - Getters: Used to get data in a certain way don't use getters just to get state back use it to get it back in a special manner
   - Don't use a getter to just get state, use getters to retrieve state in a transformed or updated manner
-- Mutations: Used to change state values. A sloppy manner of doing so but a way none the less
+- Mutations: Used to change and update state values.
   - Try to do most of your heavy lifting within your mutations
   - Simply making a setter is fine, but if there is any sort of logic or something behind that you do before committing, try moving that into the mutation instead
 - Actions: Used to make Async requests to a server
@@ -90,11 +93,21 @@ const store = {
     },
 
     // An "Okay" mutation
+    // It's okay because its only purpose is to set something
+    // (Which is totally fine if thats all it needs to do)
+    // Try to make mutations do some work if work needs done to the data before it's stored
     setOther(state, val) {
-      state.other = val // <== this is what I mean about sloppy mutation in cons
+      state.other = val
     }
 
-    // Try to make your mutations do specific work. If you do something to the data and THEN commit it, try doing that within the mutation instead
+    // A little (and kinda bad) example
+    setOtherTwo(state, val) {
+      if (!val) {
+        state.other = 'No Value!'
+      } else {
+        state.other = val
+      }
+    }
   },
 
   actions: {
