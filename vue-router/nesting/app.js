@@ -12,7 +12,7 @@ const BlogFollowers = { template: '<div>Followers</div>' }
 const BlogPosts = { template: '<div>Posts</div>' }
 
 const router = new VueRouter({
-  routed: [
+  routes: [
     {
       path: '/blog/:id',
       component: Blog,
