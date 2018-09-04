@@ -16,7 +16,7 @@ Vuex is a powerful state management tool built around the vue ecosystem.
 ### Cons
 
 - State is too easily mutated
-  - I've never been a real fan of the way Vuex handles mutations it can be handled in more of a proper manner
+  - I've never been a real fan of the way Vuex handles mutations
 - Very easy to fall into the void of over modularizing things
 - Improper use of the store is very very easy with no safe guards
 - If done incorrectly it might take away your ability to properly use the `v-model` capabilities of Vue
