@@ -106,7 +106,7 @@ const store = {
 
     // Good Getter
     reversedTest(state) {
-      return state.test.split().reverse().join('')
+      return state.other.split().reverse().join('')
     }
   },
 
